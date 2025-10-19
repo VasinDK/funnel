@@ -22,7 +22,7 @@ git clone https://github.com/VasinDK/funnel.git /local/modules/dk.vasin/
 ```
 
 ### Способ 2: Ручная установка
-1. Скачайте архив модуля
+1. Скачайте архив модуля.
 2. Распакуйте в папку /local/modules/dk.vasin/
 
 ### Активация модуля
