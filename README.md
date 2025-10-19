@@ -41,5 +41,5 @@ git clone https://github.com/VasinDK/funnel.git /local/modules/dk.vasin/
 ## Автоматизация. Запуск проверки через Cron
 Для автоматической проверки добавьте в cron задание:
 ```bash
-0 7 * * * curl -X POST "https://your-domain.ru/bitrix/services/main/ajax.php?action=dk:vasin.funnelMonitor.check"
+0 7 * * * curl -X POST "https://your-domain.ru/bitrix/services/main/ajax.php?action=dk:vasin.funnelMonitorController.check"
 ```

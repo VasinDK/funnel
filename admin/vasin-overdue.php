@@ -5,7 +5,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/bitrix/modules/main/include/prolog_ad
 use Bitrix\Main\Loader;
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\UI\Extension;
-use Dk\Vasin\Controllers\FunnelMonitor;
+use Dk\Vasin\Controllers\FunnelMonitorController;
 use Bitrix\Main\SystemException;
 
 global $APPLICATION;
@@ -20,7 +20,7 @@ Extension::load(['vasin.overdue']);
 
 $APPLICATION->setTitle(Loc::getMessage('VASIN_SETTINGS_CONTROL'));
 
-$fun = new FunnelMonitor();
+$fun = new FunnelMonitorController();
 $funnels = $fun->getAction();
 ?>
 

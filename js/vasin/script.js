@@ -20,7 +20,7 @@ BX.ready(function() {
     recipientButton.addEventListener('click', () => {
         BX.toggleClass(BX('recipient-button'), 'ui-btn-wait')
 
-        BX.ajax.runAction('dk:vasin.recipient.get', {
+        BX.ajax.runAction('dk:vasin.recipientController.get', {
             method: 'GET',
         }).then(function (response) {
             dialog.setPreselectedItems(response.data);
@@ -47,7 +47,7 @@ BX.ready(function() {
             }
         })
 
-        const promise1 = BX.ajax.runAction('dk:vasin.recipient.upsert', {
+        const promise1 = BX.ajax.runAction('dk:vasin.recipientController.upsert', {
             data: {
                 items: ids
             },
@@ -69,7 +69,7 @@ BX.ready(function() {
             }
         });
 
-        const promise2 = BX.ajax.runAction('dk:vasin.funnelMonitor.upsert', {
+        const promise2 = BX.ajax.runAction('dk:vasin.funnelMonitorController.upsert', {
             data: {
                 items: resultCheckboxes,
             },
@@ -95,7 +95,7 @@ BX.ready(function() {
     start.addEventListener('click', () => {
         BX.toggleClass(BX('start'), 'ui-btn-wait')
 
-            BX.ajax.runAction('dk:vasin.funnelMonitor.check', {
+            BX.ajax.runAction('dk:vasin.funnelMonitorController.check', {
         })
             .then(function(response) {
                 BX.UI.Notification.Center.notify({

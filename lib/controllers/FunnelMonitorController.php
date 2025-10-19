@@ -17,7 +17,7 @@ use Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);
 
-class FunnelMonitor extends Controller
+class FunnelMonitorController extends Controller
 {
     private FunnelService $funnelService;
 

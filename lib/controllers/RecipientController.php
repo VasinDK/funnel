@@ -13,7 +13,7 @@ use Bitrix\Main\ObjectPropertyException;
 use Bitrix\Main\SystemException;
 use Dk\Vasin\Services\RecipientService;
 
-class Recipient extends Controller
+class RecipientController extends Controller
 {
     private RecipientService $recipientService;
 
